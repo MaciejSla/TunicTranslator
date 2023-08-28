@@ -1,0 +1,54 @@
+[
+	{
+		"d": "M 9.9999997,105 59.999998,120",
+		"id": "lower_left_bottom_slant"
+	},
+	{
+		"d": "M 9.9999997,105 59.999998,89.999999",
+		"id": "lower_left_top_slant"
+	},
+	{
+		"d": "M 10,90.550914 9.9999997,105",
+		"id": "lower_left_wall"
+	},
+	{
+		"d": "M 59.999998,89.999999 V 120",
+		"id": "lower_middle_wall"
+	},
+	{
+		"d": "M 59.999998,120 110,105.30417",
+		"id": "lower_right_bottom_slant"
+	},
+	{
+		"d": "M 59.999998,89.999999 110,105.30417",
+		"id": "lower_right_top_slant"
+	},
+	{
+		"d": "M 9.9999997,44.999999 59.999998,60.000001",
+		"id": "upper_left_bottom_slant"
+	},
+	{
+		"d": "M 59.999998,30 9.9999997,44.999999",
+		"id": "uper_left_top_slant"
+	},
+	{
+		"d": "M 9.9999997,44.999999 V 75",
+		"id": "upper_left_wall"
+	},
+	{
+		"d": "M 59.999998,60.000001 V 75",
+		"id": "upper_middle_bottom_wall"
+	},
+	{
+		"d": "M 59.999998,60.000001 V 30",
+		"id": "upper_middle_top_wall"
+	},
+	{
+		"d": "M 110,44.999999 59.999998,60.000001",
+		"id": "upper_right_bottom_slant"
+	},
+	{
+		"d": "M 59.999998,30 110,44.999999",
+		"id": "upper_right_top_slant"
+	}
+]
