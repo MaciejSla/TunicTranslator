@@ -83,16 +83,7 @@
 					<path {...gray} d={store[id].d} stroke="#000000" />
 				{/if}
 			{/each}
-			<path
-				style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.237;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
-				id="base"
-				width="100"
-				height="10"
-				x="10"
-				y="73"
-				transform="matrix(1.04,0,0,1,-2.4000003,0)"
-				d="m 12,73 96,0 a 2,2 45 0 1 2,2 2,2 135 0 1 -2,2 H 12 a 2,2 45 0 1 -2,-2 2,2 135 0 1 2,-2 z"
-			/>
+			<path {...gray} d="M 9.9255908,75 H 110.07441" id="base" stroke="#000000" />
 		</svg>
 	{/each}
 </div>
@@ -115,16 +106,7 @@
 				stroke={store[elem.id].clicked ? '#000000' : '#b4b4b4'}
 			/>
 		{/each}
-		<path
-			style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.237;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
-			id="base"
-			width="100"
-			height="4"
-			x="10"
-			y="73"
-			transform="matrix(1.04,0,0,1,-2.4000003,0)"
-			d="m 12,73 96,0 a 2,2 45 0 1 2,2 2,2 135 0 1 -2,2 H 12 a 2,2 45 0 1 -2,-2 2,2 135 0 1 2,-2 z"
-		/>
+		<path {...gray} d="M 9.9255908,75 H 110.07441" id="base" stroke="#000000" />
 		<circle
 			on:click={clickme}
 			{...gray}
