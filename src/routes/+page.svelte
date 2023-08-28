@@ -6,6 +6,13 @@
 		},
 		{ accent_circle: { clicked: false, id: 'accent_circle' } }
 	);
+	let isDrag = false;
+	const beginDrag = () => {
+		isDrag = true;
+	};
+	const endDrag = () => {
+		isDrag = false;
+	};
 	// let overlay = [];
 	let stack = [];
 	let gray = {
@@ -21,18 +28,22 @@
 		'stroke-opacity': 1,
 		'paint-order': 'normal'
 	};
-	function clickme(e) {
-		const id = e.target.id;
-		const clicked = store[id].clicked;
-		store[id].clicked = !clicked;
-		// if (!clicked) {
-		// 	overlay = [...overlay, { id: e.target.id, d: e.target.d }];
-		// } else {
-		// 	overlay = overlay.map((x) => {
-		// 		if (x.id != id) return x;
-		// 	});
-		// }
-		// console.log(overlay);
+
+	// ! Figure out rightclick?
+	function mouseHandler(e) {
+		if (isDrag || e.type == 'click') {
+			const id = e.target.id;
+			const clicked = store[id].clicked;
+			store[id].clicked = !clicked;
+			// if (!clicked) {
+			// 	overlay = [...overlay, { id: e.target.id, d: e.target.d }];
+			// } else {
+			// 	overlay = overlay.map((x) => {
+			// 		if (x.id != id) return x;
+			// 	});
+			// }
+			// console.log(overlay);
+		}
 	}
 
 	function reset() {
@@ -52,6 +63,8 @@
 		arr.length != 0 ? (stack = [...stack, arr]) : null;
 	}
 </script>
+
+<svelte:window on:mousedown={beginDrag} on:mouseup={endDrag} />
 
 <h1>Welcome to SvelteKit</h1>
 <p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
@@ -100,7 +113,8 @@
 	<g>
 		{#each list as elem}
 			<path
-				on:click={clickme}
+				on:mouseover={mouseHandler}
+				on:click={mouseHandler}
 				{...gray}
 				{...elem}
 				stroke={store[elem.id].clicked ? '#000000' : '#b4b4b4'}
@@ -108,7 +122,8 @@
 		{/each}
 		<path {...gray} d="M 9.9255908,75 H 110.07441" id="base" stroke="#000000" />
 		<circle
-			on:click={clickme}
+			on:mouseover={mouseHandler}
+			on:click={mouseHandler}
 			{...gray}
 			fill="#000000"
 			fill-opacity="0"
@@ -134,7 +149,7 @@
 					r="8"
 				/>
 			{:else}
-				<path on:click={clickme} {...gray} {...elem} stroke="#000000" />
+				<path on:mouseenter={mouseHandler} on:click={mouseHandler} {...gray} {...elem} stroke="#000000" />
 			{/if}
 		{/each}
 	</g> -->
